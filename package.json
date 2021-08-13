@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:esm": "webpack --config esm/webpack.config.js",
     "start:commonjs": "node commonjs",
+    "start:esm": "npm run build:esm && node esm/dist/server.dist",
     "start:mjs": "node mjs/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
